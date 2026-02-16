@@ -12,7 +12,6 @@ ce12-dev-env-setup/
 
 ## 1️⃣ `README.md`
 
-````markdown
 # Development Environment Setup
 
 This repository provides a **quick setup** for anyone setting up a development environment on a new machine.
@@ -105,9 +104,8 @@ helm --version
 * Scripts are beginner-friendly for students changing laptops or joining new teams.
 * If a tool fails, consult the official documentation or `Required Hardware and Software.docx`.
 
-````
-
 ---
+
 
 ## 2️⃣ `setup-dev-environment.sh` (macOS/Linux/WSL)
 
@@ -118,6 +116,7 @@ helm --version
 *(Use the script from the previous response with progress bar function `progress_bar()` and `install_tool()`.)*
 
 ---
+
 
 ## 3️⃣ `setup-windows-oneclick.ps1` (Windows)
 
