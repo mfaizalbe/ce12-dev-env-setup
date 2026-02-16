@@ -66,6 +66,7 @@ echo -e "${YELLOW}Detected OS: $OS${NC}"
 # ---------------------------
 # macOS Setup
 # ---------------------------
+: <<'COMMENT'
 if [[ "$OS" == "Darwin" ]]; then
     echo -e "${YELLOW}Running macOS setup...${NC}"
     if ! command -v brew &> /dev/null; then
@@ -88,6 +89,36 @@ if [[ "$OS" == "Darwin" ]]; then
         source "$(brew --prefix nvm)/nvm.sh"
         progress_bar 5 "Installing Node.js LTS..."
         nvm install --lts
+    fi
+COMMENT
+if [[ "$OS" == "Darwin" ]]; then
+    echo -e "${YELLOW}Running macOS setup...${NC}"
+
+    # Install Homebrew if missing
+    if ! command -v brew &> /dev/null; then
+        echo -e "${YELLOW}Installing Homebrew...${NC}"
+        /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+    fi
+
+    echo -e "${YELLOW}Updating Homebrew...${NC}"
+    brew update
+
+    echo -e "${YELLOW}Installing tools from Brewfile...${NC}"
+    brew bundle --file ./Brewfile
+
+    # Setup NVM environment (if installed via Brewfile)
+    if command -v nvm &> /dev/null || [ -d "$(brew --prefix nvm 2>/dev/null)" ]; then
+        export NVM_DIR="$HOME/.nvm"
+        mkdir -p "$NVM_DIR"
+
+        if [ -s "$(brew --prefix nvm)/nvm.sh" ]; then
+            source "$(brew --prefix nvm)/nvm.sh"
+        fi
+
+        if ! command -v node &> /dev/null; then
+            progress_bar 5 "Installing Node.js LTS..."
+            nvm install --lts
+        fi
     fi
 
 # ---------------------------
