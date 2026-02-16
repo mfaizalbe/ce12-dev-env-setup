@@ -160,3 +160,10 @@ Set-ExecutionPolicy Bypass -Scope Process
 ```
 
 > Watch **progress bars** for each tool and check the log file if anything fails.
+
+---
+
+### 🙏 Acknowledgements
+
+This setup guide is based on the course documentation:
+[NTU SCTP - Coaching 1: Developer Tools Setup Review](https://docs.google.com/document/d/17FHtNo1hWOK3sxRcwcGphUtV4CWPtUkeYk2ZP90VAEI)
