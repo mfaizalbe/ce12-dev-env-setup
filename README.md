@@ -1,4 +1,4 @@
-# 📂 Repo: `dev-environment-setup`
+# 📂 Repo: `ce12-dev-env-setup`
 
 ```
 ce12-dev-env-setup/
