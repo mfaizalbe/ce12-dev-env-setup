@@ -215,7 +215,7 @@ COMMENT
 # Verification
 # ---------------------------
 echo -e "${YELLOW}Running Verification...${NC}"
-commands=("git" "docker" "aws" "terraform" "node" "python3" "kubectl" "helm")
+commands=("git" "docker" "aws" "terraform" "node" "python3" "kubectl" "helm" "code")
 
 for cmd in "${commands[@]}"; do
     echo -e "${BLUE}Checking $cmd...${NC}"
