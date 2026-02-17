@@ -4,6 +4,7 @@
 ce12-dev-env-setup/
 │
 ├── README.md
+├── Brewfile                       # Lists all packages and casks for brew bundle.
 ├── setup-dev-environment.sh       # Bash script for macOS/Linux/WSL with progress bars
 └── setup-windows-oneclick.ps1     # PowerShell script for Windows with progress bars
 ```
@@ -87,6 +88,7 @@ node --version
 python3 --version
 kubectl version --client
 helm --version
+code --version
 ```
 
 ---
