@@ -15,6 +15,6 @@ brew "hashicorp/tap/terraform"
 brew "nvm"
 
 # Apps
-cask "docker"
+cask "docker-desktop"
 cask "visual-studio-code"
 
