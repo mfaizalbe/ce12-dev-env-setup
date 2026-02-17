@@ -224,6 +224,26 @@ for cmd in "${commands[@]}"; do
         $cmd --version
     else
         echo -e "${RED}❌ $cmd is NOT installed.${NC}"
+        
+        # Special handling for Docker
+        if [[ "$cmd" == "docker" ]]; then
+            echo -e "${YELLOW}Opening Docker Desktop download page...${NC}"
+            if [[ "$OSTYPE" == "darwin"* ]]; then
+                open "https://www.docker.com/products/docker-desktop"
+            else
+                xdg-open "https://www.docker.com/products/docker-desktop" &>/dev/null
+            fi
+        fi
+
+        # Special handling for VSCode
+        if [[ "$cmd" == "code" ]]; then
+            echo -e "${YELLOW}Opening Visual Studio Code download page...${NC}"
+            if [[ "$OSTYPE" == "darwin"* ]]; then
+                open "https://code.visualstudio.com"
+            else
+                xdg-open "https://code.visualstudio.com" &>/dev/null
+            fi
+        fi
     fi
 done
 
