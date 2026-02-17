@@ -16,4 +16,5 @@ brew "nvm"
 
 # Apps
 cask "docker"
+cask "visual-studio-code"
 
