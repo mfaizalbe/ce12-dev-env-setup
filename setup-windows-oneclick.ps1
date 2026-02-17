@@ -1,3 +1,12 @@
+<#
+========================================================
+Script: setup-windows-oneclick.ps1
+Purpose: Setup development environment on Windows
+Created by: Muhammad Faizal Bin Ehsan
+Contact: https://github.com/mfaizalbe
+Date: 2026-02-16
+========================================================
+#>
 # ---------------------------
 # Colors
 # ---------------------------

@@ -1,4 +1,11 @@
-#!/bin/bash
+#!/usr/bin/env bash
+# ========================================================
+# Script: setup-dev-environment.sh
+# Purpose: Setup development environment on macOS/Linux/WSL
+# Created by: Muhammad Faizal Bin Ehsan
+# Contact: https://github.com/mfaizalbe
+# Date: 2026-02-16
+# ========================================================
 
 # ---------------------------
 # Colors
